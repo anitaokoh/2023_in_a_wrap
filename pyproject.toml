@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "end-of-year-summary"
+version = "0.1.0"
+description = ""
+authors = ["anitaokoh <sleekymeeratura@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.29.0"
+pandas = "^2.1.4"
+plotly = "^5.18.0"
+openai = "^1.6.1"
+langchain = "^0.0.352"
+pytest = "^7.4.3"
+pre-commit = "^3.6.0"
+kaleido = "0.2.1"
+python-dotenv = "^1.0.0"
+pytest-cov = "^4.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
