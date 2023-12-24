@@ -2,3 +2,4 @@ __pycache__
 .env
 .pytest_cache
 .coverage
+tests/test_emotion_analyzer.py
