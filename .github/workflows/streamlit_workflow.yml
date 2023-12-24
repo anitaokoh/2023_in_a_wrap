@@ -24,7 +24,7 @@ jobs:
 
     - name: Run tests
       env:
-        LOCAL_ENV_VAR: ${{ secrets.MOCK_API_KEY }}
+        MOCK_API_KEY: ${{ secrets.MOCK_API_KEY }}
       run: |
         make test
 
