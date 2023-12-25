@@ -14,4 +14,4 @@ All these emotions are  visualized into a line chart as a summary for the year.
 You can find the link to the app [here](https://end-of-year-wrap-up.streamlit.app/)
 
 ### Video of the app
-
+![video](images/0fe222d2-8d59-474e-a471-b10456865fca.gif)
