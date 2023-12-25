@@ -9,8 +9,8 @@ This web app helps to represent each month's highlights into five broad emotion 
 
 
 
-All this emotions and month are they visualized into a line chart as a summary for the year
+All these emotions are  visualized into a line chart as a summary for the year.
 
-You can find the link to the app [here]()
+You can find the link to the app [here](https://end-of-year-wrap-up.streamlit.app/)
 
 ### Video of the app
