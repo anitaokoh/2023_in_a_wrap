@@ -1,6 +1,5 @@
 # emotion_analyzer.py
 
-# from langchain.llms import OpenAI
 from langchain.chat_models import ChatOpenAI
 from langchain.schema import HumanMessage
 
