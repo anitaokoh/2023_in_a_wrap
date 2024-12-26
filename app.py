@@ -19,7 +19,7 @@ def setup_page_layout():
     # st.markdown(f"""<style>.reportview-container .main .block-container{{{max_width_str}}}</style>""", unsafe_allow_html=True)
     style_str = "<style>.reportview-container .main .block-container{max-width: 1030px;}</style>"
     st.markdown(style_str, unsafe_allow_html=True)
-    st.image('images/year_in_a_wrap.jpg', use_column_width=True)
+    st.image('images/year_in_a_wrap.jpg', use_container_width=True)
 
 def display_intro():
     """Display the introduction section of the app."""

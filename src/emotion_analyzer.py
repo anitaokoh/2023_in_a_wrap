@@ -1,6 +1,8 @@
 # emotion_analyzer.py
 
-from langchain.llms import OpenAI
+# from langchain.llms import OpenAI
+from langchain.chat_models import ChatOpenAI
+from langchain.schema import HumanMessage
 
 class EmotionAnalyzer:
     """
@@ -24,7 +26,7 @@ class EmotionAnalyzer:
         self.instruction_prompt = instruction_prompt
         self.context = context
         self.emotions_list = emotions_list
-        self.llm = OpenAI(model='gpt-4o',openai_api_key=openai_api_key)
+        self.llm = ChatOpenAI(model_name='gpt-4o',openai_api_key=openai_api_key)
 
     def run_emotion_sent(self, user_texts):
         """
@@ -38,12 +40,16 @@ class EmotionAnalyzer:
         """
         responses = []
         for user_text in user_texts:
-            prompt = (
-                self.instruction_prompt +
-                '{context}\n\n'.format(context=self.context) +
-                'Here\'s the text:\n' + user_text
+            messages = [
+            HumanMessage(
+                content=(
+                    self.instruction_prompt +
+                    '{context}\n\n'.format(context=self.context) +
+                    'Here\'s the text:\n' + user_text
+                )
             )
-            response = self.llm(prompt)
+        ]
+            response = self.llm(messages)
             responses.append(response)
         return responses
 
@@ -57,11 +63,11 @@ class EmotionAnalyzer:
         Returns:
             str: The extracted emotion word, or an empty string if not found.
         """
-        words = response.lower().split()
+        word = response.lower()
         emotion_words = [emotion.lower() for emotion in self.emotions_list]
-        for word in words:
-            if word in emotion_words:
-                return word.capitalize()
+    
+        if word in emotion_words:
+            return word.capitalize()
         return ""
 
     def process_responses(self, responses):
@@ -76,6 +82,6 @@ class EmotionAnalyzer:
         """
         processed_responses = []
         for response in responses:
-            emotion = self.extract_emotion_word(response)
+            emotion = self.extract_emotion_word(response.content)
             processed_responses.append(emotion)
         return processed_responses
