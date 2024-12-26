@@ -1,5 +1,5 @@
 # Year Emotion Summarization App
-![image](images/2023_loading.gif)
+![image](images/year_in_a_wrap.jpg)
 This web app helps to represent each month's highlights into five broad emotion category sentiments and creates a simple summary visualization. The emotions are
 - **Euphoria**: 'Euphoria' captures feelings of extreme joy, bliss, and ecstasy. This term encompasses the highest peaks of positive human emotion, where experiences are intensely pleasurable and overwhelmingly positive.
 - **Contentment**: 'Contentment' is a suitable term as it covers feelings of happiness, satisfaction, and pleasure that are less intense but still distinctly positive. It's the emotion of being pleased with your situation and generally feeling good about life.

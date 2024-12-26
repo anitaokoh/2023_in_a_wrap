@@ -24,7 +24,7 @@ class EmotionAnalyzer:
         self.instruction_prompt = instruction_prompt
         self.context = context
         self.emotions_list = emotions_list
-        self.llm = OpenAI(openai_api_key=openai_api_key)
+        self.llm = OpenAI(model='gpt-4o',openai_api_key=openai_api_key)
 
     def run_emotion_sent(self, user_texts):
         """

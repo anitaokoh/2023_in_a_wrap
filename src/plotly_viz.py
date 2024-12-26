@@ -48,7 +48,7 @@ def create_fig(df,emotions_list,emotion_scale):
 
     ],
     title={
-            'text': "MY 2023 IN A WRAP",
+            'text': "MY YEAR IN A WRAP",
             'y':0.99,
             'x':0.55,
             'xanchor': 'center',

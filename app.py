@@ -19,13 +19,13 @@ def setup_page_layout():
     # st.markdown(f"""<style>.reportview-container .main .block-container{{{max_width_str}}}</style>""", unsafe_allow_html=True)
     style_str = "<style>.reportview-container .main .block-container{max-width: 1030px;}</style>"
     st.markdown(style_str, unsafe_allow_html=True)
-    st.image('images/2023_loading.gif', use_column_width=True)
+    st.image('images/year_in_a_wrap.jpg', use_column_width=True)
 
 def display_intro():
     """Display the introduction section of the app."""
-    st.subheader('How has your 2023 been?')
+    st.subheader('How has your year been?')
     st.markdown(
-        """<p>2023 has been a year filled with rollercoasters. Some good and some sad emotions.</p>
+        """<p>This has been a year filled with rollercoasters. Some good and some sad emotions.</p>
            <p>This web app helps to represent each month's highlights into five broad emotion category sentiments and creates a simple summary visualization.</p>
            <p>The emotions are: <strong>Euphoria, Contentment, Equanimity, Discomfort</strong>, and <strong>Distress</strong>.</p>""",
         unsafe_allow_html=True
@@ -99,6 +99,6 @@ def viz_page():
 
 if __name__ == "__main__":
     initialize_session_state()
-    st.set_page_config(page_title="2023 in a wrap", page_icon="🎉", layout='wide', initial_sidebar_state='expanded')
-    st.title("2023 IN A WRAP")
+    st.set_page_config(page_title="Your year in a wrap", page_icon="🎉", layout='wide', initial_sidebar_state='expanded')
+    st.title("Your Year In A Wrap")
     viz_page()
