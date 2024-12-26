@@ -19,4 +19,4 @@ class TestDownloadLink:
 
         # Check if the download link contains the expected structure
         assert 'href="data:file/image;base64,' in download_link
-        assert 'download="my_year_in_a_wrap.png.png"' in download_link
+        assert 'download="my_year_in_a_wrap.png"' in download_link
